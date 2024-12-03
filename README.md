@@ -7,9 +7,8 @@ Para realizar este programa es útil dividirlo en problemas más pequeños , com
 
 ## Reloj 
 Si observamos la hoja de interrupciones del ensamblador, podemos ver que en la INT 21h del ensamblador existe el servicio 2Ch para obtener la hora del sistema, investigando acerca de esta interrupción sabemos que 
-###INTERRUPCION 21H , SERVICIO 2CH
-####Obtenemos la hora y se guarda en los registros siguienes: CH: Hora; CL: Minutos; DH: Segundos; DL: Céntesimas de segundo (0-99);
-
+INTERRUPCION 21H , SERVICIO 2CH
+<span style="color:red">Obtenemos la hora y se guarda en los registros siguienes: CH: Hora; CL: Minutos; DH: Segundos; DL: Céntesimas de segundo (0-99);</span>
 
 
 ```assembly
@@ -19,5 +18,6 @@ main:
         lw   $s0, 0($s0)
         la   $s1, B
         lw   $s1, 0($s1)
+        
 ```
-<span style="color:red">Obtenemos la hora y se guarda en los registros siguienes: CH: Hora; CL: Minutos; DH: Segundos; DL: Céntesimas de segundo (0-99);</span>
+
